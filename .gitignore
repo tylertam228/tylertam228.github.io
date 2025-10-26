@@ -1,0 +1,9 @@
+/Certificate/
+/CV_*.pdf
+/CV*.pdf
+
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+image/Selfie.jpg
