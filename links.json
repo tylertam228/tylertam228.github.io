@@ -9,13 +9,13 @@
     },
     {
       "id": "cert-kaggle-ml",
-      "label": "Kaggle: Intro to Machine Learning",
+      "label": "Kaggle: Intro to Machine Learning (11/2025)",
       "url": "https://1drv.ms/b/c/261ecf05dbd1f526/IQS-LIwoPUNWTonQlvSzQBT3AdkA-iBtM67bcOTMU9l8uaU",
       "icon": "image/icon/kaggle.png"
     },
     {
       "id": "cert-freecodecamp-csharp",
-      "label": "Foundational C# with Microsoft",
+      "label": "Foundational C# with Microsoft (11/2025)",
       "url": "https://freecodecamp.org/certification/fcc-36ef70e9-fc0a-4ca2-9ec4-ac35b6ab59c3/foundational-c-sharp-with-microsoft",
       "icon": "image/icon/FreeCodeCamp.jpg"
     }
