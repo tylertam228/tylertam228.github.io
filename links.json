@@ -1,0 +1,23 @@
+{
+  "cv": "https://1drv.ms/b/c/261ecf05dbd1f526/IQSjGghAlEBRRrG-6RtqGrVfAR8KUuhdebDZAtZlOvrkFUc",
+  "certificates": [
+    {
+      "id": "cert-kaggle-python",
+      "label": "Kaggle: Python Course Certificate (02/2025)",
+      "url": "https://1drv.ms/b/c/261ecf05dbd1f526/IQR4RVCu3-fTSZNNm8b3pQ-GAa_mdfVTDDZm2flxMA08D40",
+      "icon": "image/icon/kaggle.png"
+    },
+    {
+      "id": "cert-kaggle-ml",
+      "label": "Kaggle: Intro to Machine Learning",
+      "url": "https://1drv.ms/b/c/261ecf05dbd1f526/IQS-LIwoPUNWTonQlvSzQBT3AdkA-iBtM67bcOTMU9l8uaU",
+      "icon": "image/icon/kaggle.png"
+    },
+    {
+      "id": "cert-freecodecamp-csharp",
+      "label": "Foundational C# with Microsoft",
+      "url": "https://freecodecamp.org/certification/fcc-36ef70e9-fc0a-4ca2-9ec4-ac35b6ab59c3/foundational-c-sharp-with-microsoft",
+      "icon": "image/icon/FreeCodeCamp.jpg"
+    }
+  ]
+}

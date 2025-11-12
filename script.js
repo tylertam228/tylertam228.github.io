@@ -262,6 +262,61 @@
 
   window.addEventListener('resize', hexResize);
   startHex();
+  
+  // Links loader: centralize external URLs in links.json
+  async function loadLinks() {
+    try {
+      const res = await fetch('links.json', { cache: 'no-store' });
+      if (!res.ok) return;
+      const data = await res.json();
+
+      // Update CV link
+      if (data.cv) {
+        const cvA = document.getElementById('cv-link');
+        if (cvA) cvA.href = data.cv;
+      }
+
+      // Update / append certificates
+      if (Array.isArray(data.certificates)) {
+        const ul = document.querySelector('#certs .card ul.files');
+        data.certificates.forEach((cert) => {
+          if (!cert || !cert.url || !cert.label) return;
+          const existing = cert.id ? document.getElementById(cert.id) : null;
+          if (existing) {
+            existing.href = cert.url;
+            if (cert.label) existing.textContent = cert.label;
+          } else if (ul) {
+            const li = document.createElement('li');
+            if (cert.icon) {
+              const img = document.createElement('img');
+              img.src = cert.icon;
+              img.alt = cert.label || 'Certificate';
+              li.appendChild(img);
+            }
+            const a = document.createElement('a');
+            if (cert.id) a.id = cert.id;
+            a.href = cert.url;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.textContent = cert.label;
+            li.appendChild(a);
+            ul.appendChild(li);
+          }
+        });
+        // re-equalize heights after DOM change
+        equalizeCertHeights();
+      }
+    } catch (_) {
+      // ignore fetch/json errors silently
+    }
+  }
+
+  // Load links after DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadLinks);
+  } else {
+    loadLinks();
+  }
 })();
 
 
